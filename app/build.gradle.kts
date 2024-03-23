@@ -1,6 +1,8 @@
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
+    id ("androidx.navigation.safeargs.kotlin")
+    id ("kotlin-parcelize")
 }
 
 android {
@@ -48,6 +50,7 @@ dependencies {
     implementation (libs.androidx.lifecycle.livedata.ktx)
     implementation(libs.androidx.navigation.fragment.ktx)
 
+    implementation(libs.androidx.room.common)
     implementation(libs.androidx.room.runtime)
     annotationProcessor(libs.androidx.room.compiler)
 }
